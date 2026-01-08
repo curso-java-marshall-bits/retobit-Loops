@@ -1,4 +1,5 @@
-public class Loops {
+ import java.util.Arrays;
+ public class Loops {
     /**
      * Reto 1: Suma de elementos con while
      * Usa un bucle while para recorrer el array "numbers" y sumar todos sus elementos.
@@ -9,9 +10,17 @@ public class Loops {
      */
     public static int sumArrayWhile() {
         int[] numbers = {4, 6, 9, 5};
-        // Tu código aquí (usa while)
-        // consejo: declara la variable "sum" fuera del loop
-        return 0; // Sustituye el 0 por la variable sum
+        int index = 0;
+        int suma = 0;
+
+        while(numbers.length>0 && index<numbers.length)
+        {
+
+            suma+=numbers[index];
+            index++;
+
+        }
+        return suma; // Sustituye el 0 por la variable sum
     }
 
     /**
@@ -24,9 +33,24 @@ public class Loops {
      */
     public static int countEvenNumbersDoWhile() {
         int[] numbers = {4, 6, 9, 5, 8};
-        // Tu código aquí (usa do while)
+        int count = 0;
+        int index = 0;
+        Boolean isPair = null;
 
-        return 0; // Sustituye el 0 por la variable count
+
+        do {
+
+            isPair = (numbers[index]%2==0);
+            if(isPair) count+=1;
+            index++;
+
+
+
+        }while(index<numbers.length);
+
+
+
+        return count; // Sustituye el 0 por la variable count
     }
 
     /**
@@ -39,10 +63,18 @@ public class Loops {
      */
     public static int findMaxWithFor() {
         int[] numbers = {4, 6, 9, 5, 3, 2};
-        // Tu código aquí (usa for)
-        // consejo: declara la variable "max" fuera del loop
+        int max = numbers[0];
 
-        return 0; // Sustituye el 0 por la variable max
+        for (int i =0; i < numbers.length;i++) {
+            if (numbers[i] > max) {
+                max = numbers[i];
+            }
+        }
+
+
+
+
+        return max; // Sustituye el 0 por la variable max
     }
 
     public static void main(String[] args) {
