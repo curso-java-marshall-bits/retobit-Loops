@@ -11,7 +11,13 @@ public class Loops {
         int[] numbers = {4, 6, 9, 5};
         // Tu código aquí (usa while)
         // consejo: declara la variable "sum" fuera del loop
-        return 0; // Sustituye el 0 por la variable sum
+        int sum = 0;
+        int i = 0;
+        while (i<numbers.length){
+            sum += numbers[i];
+            i++;
+        }
+        return sum; // Sustituye el 0 por la variable sum
     }
 
     /**
@@ -24,9 +30,16 @@ public class Loops {
      */
     public static int countEvenNumbersDoWhile() {
         int[] numbers = {4, 6, 9, 5, 8};
+        int count = 0;
+        int i = 0;
+        do {
+            if (numbers[i] % 2 ==0){
+                count++;
+            }
+            i++;
+        }while (i<numbers.length);
         // Tu código aquí (usa do while)
-
-        return 0; // Sustituye el 0 por la variable count
+        return count; // Sustituye el 0 por la variable count
     }
 
     /**
@@ -39,10 +52,16 @@ public class Loops {
      */
     public static int findMaxWithFor() {
         int[] numbers = {4, 6, 9, 5, 3, 2};
+        int max = numbers [0];
         // Tu código aquí (usa for)
+        for (int i=1;i<numbers.length;i++){
+            if(numbers[i] > max){
+                max = numbers[i];
+            }
+        }
         // consejo: declara la variable "max" fuera del loop
 
-        return 0; // Sustituye el 0 por la variable max
+        return max; // Sustituye el 0 por la variable max
     }
 
     public static void main(String[] args) {
