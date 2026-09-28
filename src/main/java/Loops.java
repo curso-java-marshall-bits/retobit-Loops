@@ -10,8 +10,18 @@ public class Loops {
     public static int sumArrayWhile() {
         int[] numbers = {4, 6, 9, 5};
         // Tu código aquí (usa while)
+        //bucle while
+        int index = 0;
+        int sum = 0;
+        while(index < numbers.length){
+            //System.out.println("Esto es un while y el resultado del index es: " + numbers[index]);
+            sum =  sum +  numbers[index] ;
+           index++; // si el contador está aquí me imprime bien desde el 1 hasta el 5
+
+
+        }
         // consejo: declara la variable "sum" fuera del loop
-        return 0; // Sustituye el 0 por la variable sum
+        return sum; // Sustituye el 0 por la variable sum
     }
 
     /**
@@ -24,9 +34,24 @@ public class Loops {
      */
     public static int countEvenNumbersDoWhile() {
         int[] numbers = {4, 6, 9, 5, 8};
-        // Tu código aquí (usa do while)
 
-        return 0; // Sustituye el 0 por la variable count
+
+        int counter = 0;
+        int count = 0;
+        // Tu código aquí (usa do while)
+        do {
+            if (numbers[counter]%2==0) {
+                //System.out.println("Valor de i = " + numbers[counter]);
+                count++;
+            }
+            counter++;
+
+        }while(counter < numbers.length );
+
+
+
+
+        return count; // Sustituye el 0 por la variable count
     }
 
     /**
@@ -39,10 +64,17 @@ public class Loops {
      */
     public static int findMaxWithFor() {
         int[] numbers = {4, 6, 9, 5, 3, 2};
+        int max = 0;
         // Tu código aquí (usa for)
+        //recorriendo con un loop sencillo (for simple)
+        for (int indice=0; indice< numbers.length; indice++){
+            //System.out.println("El valor de índice es: " + numbers[indice]);
+             max =  Math.max(max,numbers[indice]) ;
+        }
+
         // consejo: declara la variable "max" fuera del loop
 
-        return 0; // Sustituye el 0 por la variable max
+        return max; // Sustituye el 0 por la variable max
     }
 
     public static void main(String[] args) {
